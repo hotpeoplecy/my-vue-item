@@ -46,8 +46,12 @@ npm run build --report
 
 使用mui创建底部：
   在F:\前端文件\Views\Day_007\资料\mui-master\mui-master\examples\hello-mui\examples找到tabbar.html文件，查看源代码，将底部源代码复制到app.vue中
-  
+
   在main文件中引入刚拷贝的样式文件 import './lib/mui/css/mui.css'
+
+  中间部分省略
+
+  添加购物车图标后，需要在main.js中引入mui-icons-extra.css文件,购物车图标才会显现
 
 
 

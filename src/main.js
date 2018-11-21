@@ -10,6 +10,8 @@ Vue.component(Header.name, Header);
 
 // 引入mui的样式文件
 import './lib/mui/css/mui.css'
+// 引入mui图标样式文件
+import './lib/mui/css/icons-extra.css'
 
 
 /* eslint-disable no-new */
