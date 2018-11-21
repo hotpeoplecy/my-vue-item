@@ -3,7 +3,7 @@
   <!-- 头部模块 -->
   <div class="item-container">
     <mt-header fixed title="Vue-item"></mt-header>
-		<h1>这是首页</h1>
+		
 
     <!-- 底部模块 -->
     <nav class="mui-bar mui-bar-tab">
@@ -30,6 +30,8 @@
 		</nav>
 
     <!-- 中间模块 -->
+		<!-- 提供内容占位符 -->
+		<router-view></router-view>
   </div>
 </template>
 

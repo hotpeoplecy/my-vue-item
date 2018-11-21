@@ -60,6 +60,8 @@ npm run build --report
   // 修改mui里的默认样式linkActiveClass: 'mui-active'，实现选中高亮
 
   去掉首页显示一直高亮 去掉mui-active   	<router-link class="mui-tab-item mui-active" to="/home">
+
+  新建文件夹pages，建立相应的文件home下面的home.vue，以后可以简写
     
   
 
