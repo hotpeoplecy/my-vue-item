@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import HomeComponent from '../pages/home'
 
 
+
 Vue.use(Router)
 
 export default new Router({
