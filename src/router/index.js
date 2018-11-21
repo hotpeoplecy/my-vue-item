@@ -1,20 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HomeComponent from '../pages/home/'
-import MemberComponent from '../pages/member/'
-import ShopcarComponent from '../pages/shopcar/'
-import SearchComponent from '../pages/search/'
+
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/', redirect: '/home' },
-    { path: '/home', component: HomeComponent },
-    { path: '/member', component: MemberComponent },
-    { path: '/shopcar', component: ShopcarComponent },
-    { path: '/search', component: SearchComponent },
+    // 匹配首页的路由规则
+    {path: '/', redirect: '/home'}
   ],
+  // 修改mui里的默认样式，实现选中高亮
   linkActiveClass: 'mui-active'
 })

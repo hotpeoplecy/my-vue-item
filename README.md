@@ -52,6 +52,16 @@ npm run build --report
   中间部分省略
 
   添加购物车图标后，需要在main.js中引入mui-icons-extra.css文件,购物车图标才会显现
+  
+   中间部分省略
+  
+  替换首页a标签为router-link
+
+  // 修改mui里的默认样式linkActiveClass: 'mui-active'，实现选中高亮
+
+  去掉首页显示一直高亮 去掉mui-active   	<router-link class="mui-tab-item mui-active" to="/home">
+    
+  
 
 
 
