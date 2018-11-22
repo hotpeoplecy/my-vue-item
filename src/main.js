@@ -2,15 +2,23 @@ import Vue from 'vue'
 import App from './App'
 import router from './router/'
 
+// 将轮播图渲染到页面 上时引入VueResource
+// 先装包：npm install
 // 引入VueResource
 import VueResource from 'vue-resource'
 // 注册VueResource
+Vue.use(VueResource)
+
+
 Vue.config.productionTip = false
 
 // 按需按需导入Mui部分组件
 import { Header } from 'mint-ui'
 // 注册组件
 Vue.component(Header.name, Header)
+
+// 导入自己的网格布局样式
+import './css/common.less'
 
 // 导入轮播图组件
 import { Swipe, SwipeItem } from 'mint-ui'
