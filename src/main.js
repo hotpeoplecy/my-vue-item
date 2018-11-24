@@ -9,6 +9,9 @@ import VueResource from 'vue-resource'
 // 注册VueResource
 Vue.use(VueResource)
 
+// 引入提取根域名的地址
+Vue.http.options.root = 'http://www.lovegf.cn:8899/'
+
 
 Vue.config.productionTip = false
 
@@ -33,6 +36,8 @@ Vue.component(SwipeItem.name, SwipeItem)
 import './lib/mui/css/mui.css'
 // 引入mui图标样式文件
 import './lib/mui/css/icons-extra.css'
+
+
 
 
 /* eslint-disable no-new */

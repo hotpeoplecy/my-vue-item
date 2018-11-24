@@ -1,14 +1,14 @@
 <template>
 
   <!-- 头部模块 -->
-  <div class="item-container">
+  <div class="app-container">
     <mt-header fixed title="Vue-item"></mt-header>
 		
 
     <!-- 底部模块 -->
     <nav class="mui-bar mui-bar-tab">
        <!-- 去掉首页显示一直高亮 去掉mui-active-->
-			<router-link class="mui-tab-item mui-active" to="/home">
+			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</router-link>
@@ -31,7 +31,11 @@
 
     <!-- 中间模块 -->
 		<!-- 提供内容占位符 -->
-		<router-view></router-view>
+		<!-- 让四个组件切换实现动画需用transition标签包裹 -->
+		<transition>
+					<router-view></router-view>
+		</transition>
+
   </div>
 </template>
 
@@ -40,8 +44,26 @@
 </script>
 
 
-<style lang="less">
-  .item-container {
-    padding-top: 40px;
+	<style lang="less">
+.app-container {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+
+  .v-enter {
+    transform: translateX(100%);
+    opacity: 0;
   }
+
+  .v-leave-to {
+		position: absolute;
+		transform: translateX(-100%);
+		opacity: 0;
+  }
+
+  .v-enter-active,
+  .v-leave-active {
+    transition: all 0.6s ease;
+  }
+}
 </style>

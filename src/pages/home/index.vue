@@ -1,6 +1,6 @@
 <template>
     <div class="home-container">
-        <!-- 录播图区域 -->
+        <!-- 轮播图区域 -->
         <mt-swipe class="binner-container" :auto="4000">
             <!-- 7.将轮播图用模板渲染到页面上 通过v-for遍历出每个得到的数据-->
             <!-- 只要是属性绑定，都需要使用vue语法v-blind进行属性绑定，可以简写成: -->
@@ -60,7 +60,7 @@
            getBannerData() {
                  // 6.判断轮播图加载的业务逻辑
                 this.$http.get("http://www.lovegf.cn:8899/api/getlunbo").then(result => {
-                    console.log(result)
+                    // console.log(result)
                    if (result.body.status === 0) {
                         this.bannerList = result.body.message;
                    } else {
@@ -117,43 +117,4 @@
   }
 }
 </style>
-    // 轮播图样式
-    .home-container {
-        .binner-container {
-            height: 200px;
-            .mint-swipe-item:nth-child(1) {
-                background-color: yellow;
-            }
-            .mint-swipe-item:nth-child(2) {
-                background-color: blue;
-            }
-            .mint-swipe-item:nth-child(3) {
-                background-color: red;
-            }
-            a {
-                display: block;
-                width: 100px;
-                height: 1px;
-            }
-            img {
-                width: 100px;
-            }
-        }
-    }
-
-    // 九宫格样式
-  .mui-grid-view {
-    background-color: #fff;
-    border: none;
-    .mui-table-view-cell {
-      border: none;
-      img {
-        width: 60px;
-        height: 60px;
-      }
-      .mui-media-body {
-        font-size: 13px;
-      }
-    }
-  }
-</style>
+   

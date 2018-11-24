@@ -1,6 +1,6 @@
 <template>
   <div class="search-container">
-    SearchContainer
+      SearchContainer
   </div>
 </template>
 
