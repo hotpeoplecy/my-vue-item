@@ -5,12 +5,12 @@
                         <!-- 渲染的页面包含标签的应该用v-html来渲染 -->
                         <!-- 创建新闻列表点击详情页面 -->
                         <!-- 属性绑定后面接的是字符串，所以要用引号把他包起来   页面跳转到哪一个页面的依据是根据唯一的id-->
-						<router-link :to="'/home/newsInfo' + item.id">
+						<router-link :to="'/home/newsInfo/' + item.id">
 							<img class="mui-media-object mui-pull-right" src="">
 							<div class="mui-media-body">
                                 <h4 class="title mui-ellipsis">{{ item.title }}</h4>
                                 <p>
-                                    <span class="ctime">发表时间:{{ item.add_time }}</span>
+                                    <span class="ctime">发表时间:{{ item.add_time | dataFormat}}</span>
                                     <span class="click">点击:{{ item.click }}次</span>
                                 </p>
 							</div>
@@ -52,7 +52,31 @@
     }
 </script>
 
-<style>
-
+<style lang="less">
+.news-list-container {
+  .mui-table-view {
+    .mui-table-view-cell > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .mui-media-body {
+      width: 100%;
+      .title {
+        font-size: 13px;
+        font-weight: bold;
+      }
+      > p {
+        width: 100%;
+      }
+      .ctime,
+      .click {
+        font-size: 13px;
+        color: #26a2ff;
+      }
+    }
+  }
+}
 </style>
 
